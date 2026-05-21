@@ -1,0 +1,7 @@
+# Arquivos objeto compilados
+*.o
+*.out
+
+# Executáveis (adicione o nome do seu executável final aqui, se tiver um específico)
+bemol_software
+a.out
