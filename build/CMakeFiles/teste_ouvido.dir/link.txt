@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/teste_ouvido.dir/src/main.cpp.o CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.o CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o -o teste_ouvido 

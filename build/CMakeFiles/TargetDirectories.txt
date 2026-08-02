@@ -1,0 +1,3 @@
+/home/rafael_barbosa/bemol_software/build/CMakeFiles/teste_ouvido.dir
+/home/rafael_barbosa/bemol_software/build/CMakeFiles/edit_cache.dir
+/home/rafael_barbosa/bemol_software/build/CMakeFiles/rebuild_cache.dir

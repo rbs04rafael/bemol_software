@@ -2,6 +2,7 @@
 #define INSTRUMENTO_H
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -14,6 +15,10 @@ public:
     
     // Método virtual puro para retornar o nome do instrumento
     virtual string getNome() = 0;
+
+    //Método virtual para retornar todas as notas do instrumento
+    virtual vector<string> getNotas() = 0;
+
 };
 
 #endif

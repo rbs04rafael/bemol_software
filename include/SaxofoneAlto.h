@@ -6,7 +6,8 @@
 class SaxofoneAlto : public Instrumento {
     public:
         void emitirSom(string nota) override;
-        string getNome() override;    
+        string getNome() override; 
+        vector<string> getNotas() override;   
 };
 
 #endif

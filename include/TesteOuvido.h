@@ -14,6 +14,7 @@ class TesteOuvido {
         TesteOuvido(Instrumento* inst, int dif);
         void gerarSequencia();
         void reproduzirTeste();
-        bool verificarResposta(std::vector<std::string> resposta);       
+        bool verificarResposta(std::vector<std::string> resposta);   
+        std::vector<std::string> getNotasGeradas();
 };
 #endif

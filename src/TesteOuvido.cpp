@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "Instrumento.h"
+#include "../include/Instrumento.h"
 
 TesteOuvido::TesteOuvido(Instrumento* inst, int dif):
  instrumentoAtual(inst), dificuldade(dif) {
@@ -19,7 +19,7 @@ void TesteOuvido::gerarSequencia(){
          "E", "F", "F#", "G", "G#", "A", "A#", "B"};
     
     //sorteia as notas aleatoriamente
-         for(int i = 0; i < dificuldade; i++){
+        for(int i = 0; i < dificuldade; i++){
         int indicieAleatorio = rand() % 12;
         notasGeradas.push_back(notasPossiveis[indicieAleatorio]);
     }
@@ -37,4 +37,16 @@ bool TesteOuvido::verificarResposta(std::vector<std::string> resposta) {
         }
     }
     return true;
+}
+
+void TesteOuvido::reproduzirTeste(){
+    /*reproduz as notas geradas de acordo com o instrumento
+    selecionado*/
+    for(const string& nota : notasGeradas){
+        instrumentoAtual->emitirSom(nota);
+    }
+}
+
+std::vector<std::string> TesteOuvido::getNotasGeradas(){
+    return notasGeradas;
 }
