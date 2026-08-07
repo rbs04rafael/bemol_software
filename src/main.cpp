@@ -2,6 +2,8 @@
 #include "../include/TesteOuvido.h"
 #include "../include/Instrumento.h"
 #include "../include/httplib.h"
+#include "../include/json.hpp" 
+using json = nlohmann::json;
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -36,6 +38,36 @@ int main(){
         res.set_content(json, "application/json");
 
         std::cout << "Sequencia gerada e enviada para o front" << endl;
+    });
+
+    servidor.Post("/verificar_resposta", [&teste](const httplib::Request& req, httplib::Response& res){
+        std::string notas_recebidas = req.body;
+
+        //transforma a resposta, que é uma string, em um "json"
+        json objeto_json = json::parse(notas_recebidas);
+
+        /*pego apenas as notas da resposta do usuario em formato de json
+        e transoformo para o formato de vector de string*/
+        std::vector<std::string> resposta_usuario = objeto_json["resposta"].get<std::vector<std::string>>();
+
+        bool resultado = teste.verificarResposta(resposta_usuario);
+
+        //transformo o resultado em formato json
+        json resultado_json;
+        if(resultado == true){
+            resultado_json["resultado"] = "Você acertou!";
+            resultado_json["pontos"] = "10";
+        }
+        else{
+            resultado_json["resultado"] = "Você errou :(";
+            resultado_json["pontos"] = "0";
+        }
+
+        //transformo o resultado_json em string para eviar ao front-end
+        std::string resultado_texto = resultado_json.dump();
+        
+        res.set_header("Access-Control-Allow-Origin","*");
+        res.set_content(resultado_texto, "application/json");
     });
 
     std::cout << "Servidor na porta 8080. Acesse: localhost:8080/ping" << std::endl;

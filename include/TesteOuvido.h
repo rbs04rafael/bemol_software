@@ -9,12 +9,17 @@ class TesteOuvido {
     private:
         Instrumento* instrumentoAtual;
         std::vector<std::string> notasGeradas;
-        int dificuldade = 0;    
+        std::vector<bool> notaFoiGerada;
+        int dificuldade = 0; 
+        int reproducao = 0; 
+        bool teveAjuda = false;  
     public:
         TesteOuvido(Instrumento* inst, int dif);
         void gerarSequencia();
         void reproduzirTeste();
-        bool verificarResposta(std::vector<std::string> resposta);   
+        bool verificarResposta(std::vector<std::string> resposta);
+        std::vector<string> gerarAjuda();   
         std::vector<std::string> getNotasGeradas();
+        
 };
 #endif

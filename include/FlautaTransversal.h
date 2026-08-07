@@ -5,7 +5,7 @@
 
 class FlautaTransversal : public Instrumento {
     public:
-        void emitirSom(string nota) override;
+        void emitirSom(string nota, double tempo) override;
         string getNome() override; 
         vector<string> getNotas() override;   
 };
