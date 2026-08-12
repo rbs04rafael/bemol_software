@@ -1,6 +1,7 @@
 #include "../include/SaxofoneAlto.h"
 #include "../include/TesteOuvido.h"
 #include "../include/Instrumento.h"
+#include "../include/InstrumentoFactory.h"
 #include "../include/httplib.h"
 #include "../include/json.hpp" 
 using json = nlohmann::json;
@@ -17,8 +18,33 @@ int main(){
     httplib::Server servidor;
 
 
-    servidor.Get("/gerar_teste", [&teste](const httplib::Request& req, 
-        httplib::Response& res){
+    servidor.Post("/configurar_teste", [&teste](const httplib::Request& req, httplib::Response& res){
+        try{
+            json config_recebida = json::parse(req.body);
+            std::string inst_escolhido = config_recebida["instrumento"];
+        
+            Instrumento* inst_novo = InstrumentoFactory::criar(inst_escolhido);
+            teste.setInstrumento(inst_novo);
+            teste.setDificuldade(config_recebida["dificuldade"]);
+
+            json aviso;
+            aviso["mensagem"] = "Configurações realizadas com sucesso!";
+
+            res.set_header("Acess-Control-Allow-Origin", "*");            
+            res.set_content(aviso.dump(), "Application/json");
+
+        }
+        catch(const std::invalid_argument erro){
+            json erro_json;
+            erro_json["erro"] = erro.what();
+
+            res.set_header("Acess-Control-Allow-Origin", "*");            
+            res.set_content(erro_json.dump(), "Application/json");
+            res.status = 400;
+        }
+    });
+
+    servidor.Get("/gerar_teste", [&teste](const httplib::Request& req, httplib::Response& res){
         teste.gerarSequencia();
         std::vector<std::string> notas = teste.getNotasGeradas();
 
@@ -38,6 +64,40 @@ int main(){
         res.set_content(json, "application/json");
 
         std::cout << "Sequencia gerada e enviada para o front" << endl;
+    });
+
+    servidor.Get("/reproduzir_teste", [&teste](const httplib::Request& req, httplib::Response& res){
+        teste.reproduzirTeste();
+
+        json aviso;
+        aviso["mensagem"] = "Som reproduzido";
+
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_content(aviso.dump(), "application/json");
+    });
+
+    servidor.Get("/pedir_ajuda", [&teste](const httplib::Request& req, httplib::Response& res){
+        try{
+            std::vector<std::string> resultado_ajuda = teste.gerarAjuda();
+
+            json ajuda_json;
+
+            ajuda_json["resultado_ajuda"] = resultado_ajuda; 
+
+            std::string texto_final = ajuda_json.dump();
+
+            res.set_header("Access-Control-Allow-Origin", "*");
+            res.set_content(texto_final, "application/json");
+        }
+        catch(const std::runtime_error& erro){
+            json erro_json;
+            erro_json["erro"] = erro.what(); //pega a mensagem de erro do throw
+
+            res.set_header("Access-Control-Allow-Origin", "*");
+            res.set_content(erro_json.dump(), "application/json");
+            res.status = 400;
+        }
+
     });
 
     servidor.Post("/verificar_resposta", [&teste](const httplib::Request& req, httplib::Response& res){
