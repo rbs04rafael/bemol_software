@@ -19,7 +19,7 @@ class TesteOuvido {
         void reproduzirTeste();
         void setInstrumento(Instrumento* novoInstrumento);
         void setDificuldade(int novaDificuldade);
-        bool verificarResposta(std::vector<std::string> resposta);
+        std::vector<std::vector<std::string>> verificarResposta(std::vector<std::string> resposta);
         std::vector<string> gerarAjuda();   
         std::vector<std::string> getNotasGeradas();
         

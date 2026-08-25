@@ -110,11 +110,11 @@ int main(){
         e transoformo para o formato de vector de string*/
         std::vector<std::string> resposta_usuario = objeto_json["resposta"].get<std::vector<std::string>>();
 
-        bool resultado = teste.verificarResposta(resposta_usuario);
+        std::vector<std::vector<std::string>> resultado = teste.verificarResposta(resposta_usuario);
 
         //transformo o resultado em formato json
         json resultado_json;
-        if(resultado == true){
+        if(resultado.empty()){
             resultado_json["resultado"] = "Você acertou!";
             resultado_json["pontos"] = "10";
         }
