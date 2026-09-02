@@ -117,12 +117,13 @@ CMakeFiles/teste_ouvido.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/rafael_barbosa/bemol_software/src/../include/TesteOuvido.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
+ /home/rafael_barbosa/bemol_software/src/../include/TesteOuvido.h \
  /home/rafael_barbosa/bemol_software/src/../include/Instrumento.h \
+ /home/rafael_barbosa/bemol_software/src/../include/InstrumentoFactory.h \
  /home/rafael_barbosa/bemol_software/src/../include/httplib.h \
  /usr/include/arpa/inet.h /usr/include/netinet/in.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -345,4 +346,21 @@ CMakeFiles/teste_ouvido.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/this_thread_sleep.h \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h /usr/include/c++/13/utility \
- /usr/include/c++/13/bits/stl_relops.h
+ /usr/include/c++/13/bits/stl_relops.h \
+ /home/rafael_barbosa/bemol_software/src/../include/json.hpp \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/c++/13/forward_list /usr/include/c++/13/bits/forward_list.h \
+ /usr/include/c++/13/bits/forward_list.tcc /usr/include/c++/13/valarray \
+ /usr/include/c++/13/bits/valarray_array.h \
+ /usr/include/c++/13/bits/valarray_array.tcc \
+ /usr/include/c++/13/bits/valarray_before.h \
+ /usr/include/c++/13/bits/slice_array.h \
+ /usr/include/c++/13/bits/valarray_after.h \
+ /usr/include/c++/13/bits/gslice.h \
+ /usr/include/c++/13/bits/gslice_array.h \
+ /usr/include/c++/13/bits/mask_array.h \
+ /usr/include/c++/13/bits/indirect_array.h /usr/include/c++/13/version \
+ /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
+ /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
+ /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
+ /usr/include/c++/13/any

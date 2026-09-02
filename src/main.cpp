@@ -11,8 +11,8 @@ using json = nlohmann::json;
 
 int main(){
     srand(time(NULL));
-    SaxofoneAlto sax = SaxofoneAlto();
-    TesteOuvido teste = TesteOuvido(&sax,5);
+    Instrumento* sax_inicial = new SaxofoneAlto();
+    TesteOuvido teste = TesteOuvido(sax_inicial,5);
 
     //instancia o servidor
     httplib::Server servidor;
@@ -101,28 +101,42 @@ int main(){
     });
 
     servidor.Post("/verificar_resposta", [&teste](const httplib::Request& req, httplib::Response& res){
-        std::string notas_recebidas = req.body;
+        std::string req_body = req.body;
 
         //transforma a resposta, que é uma string, em um "json"
-        json objeto_json = json::parse(notas_recebidas);
+        json objeto_json = json::parse(req_body);
 
         /*pego apenas as notas da resposta do usuario em formato de json
         e transoformo para o formato de vector de string*/
-        std::vector<std::string> resposta_usuario = objeto_json["resposta"].get<std::vector<std::string>>();
+        std::vector<std::string> notas_recebidas = objeto_json["resposta"].get<std::vector<std::string>>();
 
-        std::vector<std::vector<std::string>> resultado = teste.verificarResposta(resposta_usuario);
+        std::vector<TesteOuvido::ErroDeNota> resultado = teste.verificarResposta(notas_recebidas);
 
         //transformo o resultado em formato json
         json resultado_json;
-        if(resultado.empty()){
-            resultado_json["resultado"] = "Você acertou!";
-            resultado_json["pontos"] = "10";
+        json array_de_erros = json::array();
+
+        int pontosGanhos = teste.processarPontuacao(resultado.size());
+
+        if(resultado.size() == 0){
+            resultado_json["resultado"] = "Você acertou tudo!! Parabéns!!";
         }
         else{
-            resultado_json["resultado"] = "Você errou :(";
-            resultado_json["pontos"] = "0";
+            resultado_json["resultado"] = "Você se enganou um pouco, mas não desanime!";
         }
 
+        for(int i = 0; i < resultado.size(); i++){
+            json erro_atual;
+            erro_atual["enviada"] = resultado[i].enviada;
+            erro_atual["esperada"] = resultado[i].esperada;
+            erro_atual["posicao"] = resultado[i].posicao;
+            array_de_erros.push_back(erro_atual);
+        }
+
+        resultado_json["detalhes_erro"] = array_de_erros;
+        resultado_json["pontos_ganhos_rodada"] = pontosGanhos;
+        resultado_json["pontuacao_total"] = teste.getPontuacaoTotal();
+        resultado_json["combo_atual"] = teste.getComboAtual();
         //transformo o resultado_json em string para eviar ao front-end
         std::string resultado_texto = resultado_json.dump();
         

@@ -1,0 +1,28 @@
+### Teste 1: Gerar as notas
+    GET http://localhost:8080/gerar_teste
+
+### Teste 2: Configurar o Jogo
+POST http://localhost:8080/configurar_teste
+Content-Type: application/json
+
+{
+    "instrumento": "flauta_transversal",
+    "dificuldade": 3
+}
+
+### Teste 3: Provocando o Erro (Fábrica)
+POST http://localhost:8080/configurar_teste
+Content-Type: application/json
+
+{
+"instrumento": "bateria",
+"dificuldade": 1
+}
+
+### Teste 4: Testando uma resposta certa
+POST http://localhost:8080/verificar_resposta
+Content-Type: application/json
+
+{
+"resposta": ["C", "D"]
+}

@@ -44,7 +44,7 @@ void TesteOuvido::gerarSequencia()
     }
 }
 
-std::vector<std::vector<std::string>> TesteOuvido::verificarResposta(std::vector<std::string> resposta)
+std::vector<TesteOuvido::ErroDeNota> TesteOuvido::verificarResposta(std::vector<std::string> resposta)
 {
     // verifica se a quantidade de notas é correta
     if (resposta.size() != dificuldade)
@@ -52,18 +52,56 @@ std::vector<std::vector<std::string>> TesteOuvido::verificarResposta(std::vector
         throw std::runtime_error("A quantidade de notas não é o suficiente");
     }
 
-    std::vector<std::vector<std::string>> gabarito;
+    std::vector<ErroDeNota> gabarito;
 
     for (int i = 0; i < resposta.size(); i++)
     {
         if (notasGeradas[i] != resposta[i])
         {
-            gabarito[0].push_back(resposta[i]);
-            gabarito[1].push_back(notasGeradas[i]);
-            return gabarito;
+            ErroDeNota erro;
+            erro.enviada = resposta[i];
+            erro.esperada = notasGeradas[i];
+            erro.posicao = i;
+            gabarito.push_back(erro);
         }
+
     }
     return gabarito;
+}
+
+int TesteOuvido::processarPontuacao(int quantidade_erros){
+    int pontos_ganhos;
+    int notas_corretas = dificuldade - quantidade_erros;
+    
+    if (notas_corretas == 0){ //se errou tudo, zera combo e n tem pontuacao
+        comboAtual = 0;
+        return 0;
+    }
+
+    pontos_ganhos = notas_corretas * 10 * dificuldade;
+
+    if(quantidade_erros == 0){ //se errou nada, ganha combo
+        comboAtual++;
+        pontos_ganhos = pontos_ganhos * comboAtual;
+    }
+    else{
+        comboAtual = 0; //se errou alguma coisa, zera combo
+    }
+
+    if(teveAjuda == true){ //se teve ajuda, ganha metade
+        pontos_ganhos = pontos_ganhos/2;
+    }
+
+    pontuacaoTotal += pontos_ganhos;
+    return pontos_ganhos;
+}
+
+int TesteOuvido::getComboAtual(){
+    return comboAtual;
+}
+
+int TesteOuvido::getPontuacaoTotal(){
+    return pontuacaoTotal;
 }
 
 void TesteOuvido::reproduzirTeste()

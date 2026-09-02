@@ -9,6 +9,8 @@ add_executable(
     teste_ouvido
     src/main.cpp
     src/SaxofoneAlto.cpp
+    src/FlautaTransversal.cpp
+    src/InstrumentoFactory.cpp
     src/TesteOuvido.cpp
 )
 

@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/rafael_barbosa/bemol_software/src/FlautaTransversal.cpp" "CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.o" "gcc" "CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.o.d"
+  "/home/rafael_barbosa/bemol_software/src/InstrumentoFactory.cpp" "CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o" "gcc" "CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o.d"
   "/home/rafael_barbosa/bemol_software/src/SaxofoneAlto.cpp" "CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.o" "gcc" "CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.o.d"
   "/home/rafael_barbosa/bemol_software/src/TesteOuvido.cpp" "CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o" "gcc" "CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o.d"
   "/home/rafael_barbosa/bemol_software/src/main.cpp" "CMakeFiles/teste_ouvido.dir/src/main.cpp.o" "gcc" "CMakeFiles/teste_ouvido.dir/src/main.cpp.o.d"

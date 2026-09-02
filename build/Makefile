@@ -129,6 +129,54 @@ teste_ouvido/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/build
 .PHONY : teste_ouvido/fast
 
+src/FlautaTransversal.o: src/FlautaTransversal.cpp.o
+.PHONY : src/FlautaTransversal.o
+
+# target to build an object file
+src/FlautaTransversal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.o
+.PHONY : src/FlautaTransversal.cpp.o
+
+src/FlautaTransversal.i: src/FlautaTransversal.cpp.i
+.PHONY : src/FlautaTransversal.i
+
+# target to preprocess a source file
+src/FlautaTransversal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.i
+.PHONY : src/FlautaTransversal.cpp.i
+
+src/FlautaTransversal.s: src/FlautaTransversal.cpp.s
+.PHONY : src/FlautaTransversal.s
+
+# target to generate assembly for a file
+src/FlautaTransversal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.s
+.PHONY : src/FlautaTransversal.cpp.s
+
+src/InstrumentoFactory.o: src/InstrumentoFactory.cpp.o
+.PHONY : src/InstrumentoFactory.o
+
+# target to build an object file
+src/InstrumentoFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o
+.PHONY : src/InstrumentoFactory.cpp.o
+
+src/InstrumentoFactory.i: src/InstrumentoFactory.cpp.i
+.PHONY : src/InstrumentoFactory.i
+
+# target to preprocess a source file
+src/InstrumentoFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.i
+.PHONY : src/InstrumentoFactory.cpp.i
+
+src/InstrumentoFactory.s: src/InstrumentoFactory.cpp.s
+.PHONY : src/InstrumentoFactory.s
+
+# target to generate assembly for a file
+src/InstrumentoFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.s
+.PHONY : src/InstrumentoFactory.cpp.s
+
 src/SaxofoneAlto.o: src/SaxofoneAlto.cpp.o
 .PHONY : src/SaxofoneAlto.o
 
@@ -210,6 +258,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... teste_ouvido"
+	@echo "... src/FlautaTransversal.o"
+	@echo "... src/FlautaTransversal.i"
+	@echo "... src/FlautaTransversal.s"
+	@echo "... src/InstrumentoFactory.o"
+	@echo "... src/InstrumentoFactory.i"
+	@echo "... src/InstrumentoFactory.s"
 	@echo "... src/SaxofoneAlto.o"
 	@echo "... src/SaxofoneAlto.i"
 	@echo "... src/SaxofoneAlto.s"
