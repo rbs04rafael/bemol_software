@@ -123,6 +123,7 @@ CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o: \
  /usr/include/c++/13/bits/vector.tcc \
  /home/rafael_barbosa/bemol_software/src/../include/SaxofoneAlto.h \
  /home/rafael_barbosa/bemol_software/src/../include/FlautaTransversal.h \
+ /home/rafael_barbosa/bemol_software/src/../include/Trombone.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \

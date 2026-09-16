@@ -81,12 +81,12 @@ clean: CMakeFiles/teste_ouvido.dir/clean
 CMakeFiles/teste_ouvido.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target teste_ouvido"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target teste_ouvido"
 .PHONY : CMakeFiles/teste_ouvido.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/teste_ouvido.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael_barbosa/bemol_software/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael_barbosa/bemol_software/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/teste_ouvido.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rafael_barbosa/bemol_software/build/CMakeFiles 0
 .PHONY : CMakeFiles/teste_ouvido.dir/rule

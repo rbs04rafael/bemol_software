@@ -201,6 +201,30 @@ src/SaxofoneAlto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.s
 .PHONY : src/SaxofoneAlto.cpp.s
 
+src/Sintetizador.o: src/Sintetizador.cpp.o
+.PHONY : src/Sintetizador.o
+
+# target to build an object file
+src/Sintetizador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o
+.PHONY : src/Sintetizador.cpp.o
+
+src/Sintetizador.i: src/Sintetizador.cpp.i
+.PHONY : src/Sintetizador.i
+
+# target to preprocess a source file
+src/Sintetizador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.i
+.PHONY : src/Sintetizador.cpp.i
+
+src/Sintetizador.s: src/Sintetizador.cpp.s
+.PHONY : src/Sintetizador.s
+
+# target to generate assembly for a file
+src/Sintetizador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.s
+.PHONY : src/Sintetizador.cpp.s
+
 src/TesteOuvido.o: src/TesteOuvido.cpp.o
 .PHONY : src/TesteOuvido.o
 
@@ -224,6 +248,30 @@ src/TesteOuvido.s: src/TesteOuvido.cpp.s
 src/TesteOuvido.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.s
 .PHONY : src/TesteOuvido.cpp.s
+
+src/Trombone.o: src/Trombone.cpp.o
+.PHONY : src/Trombone.o
+
+# target to build an object file
+src/Trombone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o
+.PHONY : src/Trombone.cpp.o
+
+src/Trombone.i: src/Trombone.cpp.i
+.PHONY : src/Trombone.i
+
+# target to preprocess a source file
+src/Trombone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.i
+.PHONY : src/Trombone.cpp.i
+
+src/Trombone.s: src/Trombone.cpp.s
+.PHONY : src/Trombone.s
+
+# target to generate assembly for a file
+src/Trombone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/teste_ouvido.dir/build.make CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.s
+.PHONY : src/Trombone.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -267,9 +315,15 @@ help:
 	@echo "... src/SaxofoneAlto.o"
 	@echo "... src/SaxofoneAlto.i"
 	@echo "... src/SaxofoneAlto.s"
+	@echo "... src/Sintetizador.o"
+	@echo "... src/Sintetizador.i"
+	@echo "... src/Sintetizador.s"
 	@echo "... src/TesteOuvido.o"
 	@echo "... src/TesteOuvido.i"
 	@echo "... src/TesteOuvido.s"
+	@echo "... src/Trombone.o"
+	@echo "... src/Trombone.i"
+	@echo "... src/Trombone.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

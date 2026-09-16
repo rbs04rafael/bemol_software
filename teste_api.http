@@ -6,13 +6,13 @@ POST http://localhost:8080/configurar_teste
 Content-Type: application/json
 
 {
-    "instrumento": "flauta_transversal",
-    "dificuldade": 3
+    "instrumento": "saxofone_alto",
+    "dificuldade": 5
 }
 
 ### Teste 3: Provocando o Erro (Fábrica)
-POST http://localhost:8080/configurar_teste
-Content-Type: application/json
+GET http://localhost:8080/reproduzir_teste
+
 
 {
 "instrumento": "bateria",

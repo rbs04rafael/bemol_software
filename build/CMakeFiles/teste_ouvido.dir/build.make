@@ -111,10 +111,24 @@ CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rafael_barbosa/bemol_software/src/FlautaTransversal.cpp -o CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.s
 
+CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o: CMakeFiles/teste_ouvido.dir/flags.make
+CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o: /home/rafael_barbosa/bemol_software/src/Trombone.cpp
+CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o: CMakeFiles/teste_ouvido.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o -MF CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o.d -o CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o -c /home/rafael_barbosa/bemol_software/src/Trombone.cpp
+
+CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rafael_barbosa/bemol_software/src/Trombone.cpp > CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.i
+
+CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rafael_barbosa/bemol_software/src/Trombone.cpp -o CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.s
+
 CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o: CMakeFiles/teste_ouvido.dir/flags.make
 CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o: /home/rafael_barbosa/bemol_software/src/InstrumentoFactory.cpp
 CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o: CMakeFiles/teste_ouvido.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o -MF CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o.d -o CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o -c /home/rafael_barbosa/bemol_software/src/InstrumentoFactory.cpp
 
 CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.s: cmake_force
 CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o: CMakeFiles/teste_ouvido.dir/flags.make
 CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o: /home/rafael_barbosa/bemol_software/src/TesteOuvido.cpp
 CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o: CMakeFiles/teste_ouvido.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o -MF CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o.d -o CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o -c /home/rafael_barbosa/bemol_software/src/TesteOuvido.cpp
 
 CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.i: cmake_force
@@ -139,13 +153,29 @@ CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rafael_barbosa/bemol_software/src/TesteOuvido.cpp -o CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.s
 
+CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o: CMakeFiles/teste_ouvido.dir/flags.make
+CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o: /home/rafael_barbosa/bemol_software/src/Sintetizador.cpp
+CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o: CMakeFiles/teste_ouvido.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o -MF CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o.d -o CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o -c /home/rafael_barbosa/bemol_software/src/Sintetizador.cpp
+
+CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rafael_barbosa/bemol_software/src/Sintetizador.cpp > CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.i
+
+CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rafael_barbosa/bemol_software/src/Sintetizador.cpp -o CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.s
+
 # Object files for target teste_ouvido
 teste_ouvido_OBJECTS = \
 "CMakeFiles/teste_ouvido.dir/src/main.cpp.o" \
 "CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.o" \
 "CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.o" \
+"CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o" \
 "CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o" \
-"CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o"
+"CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o" \
+"CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o"
 
 # External object files for target teste_ouvido
 teste_ouvido_EXTERNAL_OBJECTS =
@@ -153,11 +183,13 @@ teste_ouvido_EXTERNAL_OBJECTS =
 teste_ouvido: CMakeFiles/teste_ouvido.dir/src/main.cpp.o
 teste_ouvido: CMakeFiles/teste_ouvido.dir/src/SaxofoneAlto.cpp.o
 teste_ouvido: CMakeFiles/teste_ouvido.dir/src/FlautaTransversal.cpp.o
+teste_ouvido: CMakeFiles/teste_ouvido.dir/src/Trombone.cpp.o
 teste_ouvido: CMakeFiles/teste_ouvido.dir/src/InstrumentoFactory.cpp.o
 teste_ouvido: CMakeFiles/teste_ouvido.dir/src/TesteOuvido.cpp.o
+teste_ouvido: CMakeFiles/teste_ouvido.dir/src/Sintetizador.cpp.o
 teste_ouvido: CMakeFiles/teste_ouvido.dir/build.make
 teste_ouvido: CMakeFiles/teste_ouvido.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable teste_ouvido"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rafael_barbosa/bemol_software/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable teste_ouvido"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teste_ouvido.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

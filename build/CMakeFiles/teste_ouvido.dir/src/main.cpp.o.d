@@ -363,4 +363,15 @@ CMakeFiles/teste_ouvido.dir/src/main.cpp.o: \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h \
- /usr/include/c++/13/any
+ /usr/include/c++/13/any \
+ /home/rafael_barbosa/bemol_software/src/../include/Sintetizador.h \
+ /usr/include/fluidsynth.h /usr/include/fluidsynth/types.h \
+ /usr/include/fluidsynth/settings.h /usr/include/fluidsynth/synth.h \
+ /usr/include/fluidsynth/shell.h /usr/include/fluidsynth/sfont.h \
+ /usr/include/fluidsynth/audio.h /usr/include/fluidsynth/event.h \
+ /usr/include/fluidsynth/midi.h /usr/include/fluidsynth/seq.h \
+ /usr/include/fluidsynth/seqbind.h /usr/include/fluidsynth/seq.h \
+ /usr/include/fluidsynth/log.h /usr/include/fluidsynth/misc.h \
+ /usr/include/fluidsynth/mod.h /usr/include/fluidsynth/gen.h \
+ /usr/include/fluidsynth/voice.h /usr/include/fluidsynth/version.h \
+ /usr/include/fluidsynth/ladspa.h

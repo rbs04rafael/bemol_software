@@ -3,11 +3,13 @@
 #include "../include/Instrumento.h"
 #include "../include/InstrumentoFactory.h"
 #include "../include/httplib.h"
-#include "../include/json.hpp" 
+#include "../include/json.hpp"
+#include "../include/Sintetizador.h" 
 using json = nlohmann::json;
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fluidsynth.h>
 
 int main(){
     srand(time(NULL));
@@ -69,11 +71,19 @@ int main(){
     servidor.Get("/reproduzir_teste", [&teste](const httplib::Request& req, httplib::Response& res){
         teste.reproduzirTeste();
 
-        json aviso;
-        aviso["mensagem"] = "Som reproduzido";
+        std::ifstream arquivo("audio.wav", std::ios::binary);
 
-        res.set_header("Access-Control-Allow-Origin", "*");
-        res.set_content(aviso.dump(), "application/json");
+        if(arquivo){
+            std::string conteudo((std::istreambuf_iterator<char>(arquivo)), std::istreambuf_iterator<char>());
+        
+            res.set_header("Access-Control-Allow-Origin", "*");
+            res.set_header("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
+            res.set_content(conteudo, "audio/wav");
+        }
+        else{
+            res.status = 500;
+            res.set_content("Erro ao ler arquivo de audio", "text/plain");
+        }
     });
 
     servidor.Get("/pedir_ajuda", [&teste](const httplib::Request& req, httplib::Response& res){

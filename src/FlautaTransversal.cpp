@@ -23,3 +23,7 @@ vector<string> FlautaTransversal::getNotas() {
     return notas;
 }
 
+int FlautaTransversal::getMidiProgram(){
+    return 73; 
+}
+

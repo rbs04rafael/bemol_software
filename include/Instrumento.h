@@ -19,6 +19,8 @@ public:
     //Método virtual para retornar todas as notas do instrumento
     virtual vector<string> getNotas() = 0;
 
+    //Método virtual para retornar o código MIDI do instrumento
+    virtual int getMidiProgram() = 0;
 };
 
 #endif

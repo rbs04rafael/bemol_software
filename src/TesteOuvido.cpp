@@ -5,6 +5,7 @@
 #include <string>
 #include <stdexcept>
 #include "../include/Instrumento.h"
+#include "../include/Sintetizador.h"
 
 TesteOuvido::TesteOuvido(Instrumento *inst, int dif) : instrumentoAtual(inst), dificuldade(dif)
 {
@@ -123,14 +124,14 @@ void TesteOuvido::reproduzirTeste()
     case 3:
         tempo = 0.5;
         break;
+    default:
+        tempo =  1;
+        break;
     }
 
     if (reproducao < 3)
     {
-        for (const string &nota : notasGeradas)
-        {
-            instrumentoAtual->emitirSom(nota, tempo);
-        }
+        Sintetizador::gerarAudio(notasGeradas, instrumentoAtual, tempo);
         reproducao++;
     }
 }
