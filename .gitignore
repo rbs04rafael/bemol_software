@@ -5,3 +5,19 @@
 # Executáveis (adicione o nome do seu executável final aqui, se tiver um específico)
 bemol_software
 a.out
+
+# Ambiente virtual e cache do Python
+api_python/venv/
+__pycache__/
+
+# Pasta de build do C++ e arquivos temporários
+build/
+audio.wav
+
+# Arquivos locais de estudo e testes (não enviar ao GitHub)
+frontend.html
+test_post.py
+.vscode/
+*.md
+audio.wav
+teste_ouvido

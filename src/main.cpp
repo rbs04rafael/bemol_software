@@ -32,7 +32,7 @@ int main(){
             json aviso;
             aviso["mensagem"] = "Configurações realizadas com sucesso!";
 
-            res.set_header("Acess-Control-Allow-Origin", "*");            
+            res.set_header("Access-Control-Allow-Origin", "*");            
             res.set_content(aviso.dump(), "Application/json");
 
         }
@@ -40,7 +40,7 @@ int main(){
             json erro_json;
             erro_json["erro"] = erro.what();
 
-            res.set_header("Acess-Control-Allow-Origin", "*");            
+            res.set_header("Access-Control-Allow-Origin", "*");            
             res.set_content(erro_json.dump(), "Application/json");
             res.status = 400;
         }
@@ -60,7 +60,7 @@ int main(){
 
         // 3. CORS: Regra de segurança fundamental da web! avisa o navegador
         // que qualquer interface gráfica (Frontend) tem permissão para ler essa resposta.
-        res.set_header("Acess-Control-Allow-Origin", "*");
+        res.set_header("Access-Control-Allow-Origin", "*");
 
         //responde enviando a string 'json' e avisando q o tipo é "application/json"
         res.set_content(json, "application/json");
@@ -156,6 +156,14 @@ int main(){
 
     std::cout << "Servidor na porta 8080. Acesse: localhost:8080/ping" << std::endl;
     
+    // O Coringa do CORS: Responde amigavelmente a qualquer navegador desconfiado
+        servidor.Options(".*", [](const httplib::Request& req, httplib::Response& res) {
+            res.set_header("Access-Control-Allow-Origin", "*");
+            res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+            res.set_header("Access-Control-Allow-Headers", "Content-Type");
+            res.status = 200; // 200 = Tudo OK, pode prosseguir!
+        });
+
     //trava o programa, matem servidor ouvindo os acessos
     servidor.listen("0.0.0.0", 8080);
 
